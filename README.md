@@ -1,33 +1,74 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# KairoAI - Twitter Reply Assistant 🤖
 
-## Getting Started
+AI-powered Chrome extension for generating smart Twitter/X replies using Gemini AI.
 
-First, run the development server:
+## Features
+
+- 🎯 Smart AI-generated replies
+- 💬 Full thread context analysis
+- 🎨 Clean side panel interface
+- 🔄 Regenerate option
+
+## Installation
+
+### Easy Way (Recommended)
+
+1. Download from [Releases Page](https://github.com/0xtbug/KairoAI/releases)
+2. Extract ZIP file
+3. Load in Chrome:
+   - Open `chrome://extensions`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select extracted folder
+
+### Build from Source
 
 ```bash
-pnpm dev
-# or
-npm run dev
-```
-
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
-
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
-
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
-
-## Making production build
-
-Run the following:
-
-```bash
+git clone https://github.com/0xtbug/KairoAI
+cd KairoAI
+pnpm install
 pnpm build
-# or
-npm run build
+# Load from build/chrome-mv3-prod
 ```
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+## Documentation
 
-## Submit to the webstores
+See detailed guides in the [`guide/`](./guide) folder:
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+- 📦 [Installation Guide](./guide/INSTALLATION.md) - Detailed installation steps
+- ⚙️ [Setup Guide](./guide/SETUP.md) - Configure API keys
+- 📖 [Usage Guide](./guide/USAGE.md) - How to use KairoAI
+- 🛠️ [Development Guide](./guide/DEVELOPMENT.md) - For developers
+
+## Development (Quick)
+
+```bash
+# Development mode
+pnpm dev
+
+# Production build
+pnpm build
+
+# Package for distribution
+pnpm package
+```
+
+## Tech Stack
+
+- **Framework**: Plasmo 0.90.5
+- **UI**: React 18.2.0 + TailwindCSS 3.4.1
+- **AI**: Google Gemini AI
+- **API**: TwitterAPI.io
+- **Storage**: @plasmohq/storage
+
+## 📝 License
+
+MIT License - feel free to use this project for any purpose.
+
+## 📧 Support
+
+For issues or questions, please open an issue on GitHub.
+
+---
+
+Built with ❤️ using [Plasmo Framework](https://docs.plasmo.com/)
